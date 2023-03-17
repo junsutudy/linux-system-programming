@@ -4,6 +4,7 @@
 #include<sys/types.h>
 #include<fcntl.h>
 #include<unistd.h>
+#include<string.h>
 #define FILE_SIZE 1024
 
 int main() {
@@ -16,5 +17,5 @@ int main() {
 
 	read(file, text, FILE_SIZE);
 
-	printf("%s", text);
+	printf("%d", (int) strlen(text));
 } 
