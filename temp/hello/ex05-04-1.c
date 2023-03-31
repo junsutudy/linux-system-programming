@@ -11,8 +11,11 @@ int main() {
 	if ((dirp = opendir(".")) == NULL)
 		exit(1);
 
+	rewinddir(dirp);
+	printf("지워진 파일들");
+
 	while (dentry = readdir(dirp)) {
-		if (dentry -> d_ino != 0)
+		if (dentry -> d_ino ==  0)
 			printf("%s\n", dentry->d_name);
 	}
 
