@@ -6,7 +6,6 @@
 
 void checkDirectoryExists(char* dirname) {
 	DIR* dirp;
-	struct dirent* dentry; 
 
 	if ((dirp = opendir(dirname)) == NULL) {
 		printf("%s does not exists", dirname);
