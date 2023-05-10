@@ -2,14 +2,11 @@
 
 int main()
 {
+	FILE *file;
 
-	FILE *fp;
-	
-	fp = fopen("test.txt", "r");
+	file = fopen("test.txt", "r");
 
-	printf("%c\n", fgetc(fp));
+	printf("%c\n", fgetc(file));
 
-	fclose(fp);
-
-	return 0;
+	fclose(file);
 }

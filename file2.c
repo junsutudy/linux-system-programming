@@ -8,9 +8,11 @@ int main()
 	int fd;
 	char pathname[] = "temp.txt";
 
-	if((fd = open(pathname, O_RDWR, 0644)) == -1) {
-		printf("ERROR\n");
+	if((fd=open(pathname, O_RDWR | O_CREAT, 0644)==-1))
+	{
+		printf("Error\n");
 		exit(1);
 	}
-}
+	close(fd);
 
+}

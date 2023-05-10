@@ -3,8 +3,8 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 
-int main() {
-
+int main()
+{
 	int filedes;
 	mode_t oldmask;
 
